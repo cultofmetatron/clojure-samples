@@ -32,16 +32,23 @@
 ;(prefix-of? candidate sequence): Both arguments are sequences. 
 ;Returns true if the elements in the candidate are the first elements in the sequence:
 
-(defn is-first? [pre sequence]
-  (= pre (first sequence)))
-
 (defn prefix-of? [prefix sequence]
   (if (= (first prefix) (first sequence))
     (if (empty? (rest prefix))
       true
       (prefix-of? (rest prefix) (rest sequence)))
     false))
-  
+
+;Exercise 7: Implement this function:
+;(tails sequence): Returns a sequence of successively smaller subsequences of the argument.
+
+(defn rest-nth [sequence]
+  true)
+
+(defn tails [sequence]
+  (if (empty? sequence)
+  (drop 1 sequence)
+  (cons sequence (tails (rest sequence)))))
 
 
 
