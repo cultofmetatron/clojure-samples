@@ -28,7 +28,22 @@
 (defn factorial [n]
   (apply * (my-range 1 n)))
 
-;Exercise 5: Below, I give a list of functions that work on lists
-; or vectors. For each one, think of a problem it could solve, and solve it.
+;Exercise 6: Implement this function:
+;(prefix-of? candidate sequence): Both arguments are sequences. 
+;Returns true if the elements in the candidate are the first elements in the sequence:
+
+(defn is-first? [pre sequence]
+  (= pre (first sequence)))
+
+(defn prefix-of? [prefix sequence]
+  (if (= (first prefix) (first sequence))
+    (if (empty? (rest prefix))
+      true
+      (prefix-of? (rest prefix) (rest sequence)))
+    false))
+  
+
+
+
 
 
