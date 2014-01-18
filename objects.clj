@@ -27,6 +27,10 @@
            (:x point2)
            (:y point2)))
 
+(def make
+  (fn [class-name & args]
+    (apply class-name args)))
+
 
 
 

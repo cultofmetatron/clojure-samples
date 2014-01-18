@@ -50,7 +50,7 @@
   (drop 1 sequence)
   (cons sequence (tails (rest sequence)))))
 
-
+;now n-queens
 
 
 
